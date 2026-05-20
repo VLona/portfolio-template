@@ -1,3 +1,5 @@
+import { QuoteForm } from "@/components/QuoteForm";
+
 // Reusable card component for each service.
 // Defined once, used 3 times below with different props.
 function ServiceCard({
@@ -183,83 +185,7 @@ export default function Home() {
 
             {/* Right: form (takes 3/5 of width on desktop) */}
             <div className="lg:col-span-3">
-              <form className="bg-white border border-stone-200 rounded-md p-8 md:p-10 space-y-5">
-                <div className="grid sm:grid-cols-2 gap-5">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-stone-700 mb-2"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Your name"
-                      className="w-full px-4 py-3 border border-stone-300 rounded-md focus:outline-none focus:border-stone-900 transition-colors"
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="phone"
-                      className="block text-sm font-medium text-stone-700 mb-2"
-                    >
-                      Phone
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="(612) 555-0199"
-                      className="w-full px-4 py-3 border border-stone-300 rounded-md focus:outline-none focus:border-stone-900 transition-colors"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-stone-700 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    className="w-full px-4 py-3 border border-stone-300 rounded-md focus:outline-none focus:border-stone-900 transition-colors"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-stone-700 mb-2"
-                  >
-                    Tell us about your project
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="I'm looking to replace 6 windows on the second floor..."
-                    className="w-full px-4 py-3 border border-stone-300 rounded-md focus:outline-none focus:border-stone-900 transition-colors resize-none"
-                  />
-                </div>
-                {/* TODO Phase 5: wire up real submission (Supabase or Formspree).
-                    For now button is type="button" so the form doesn't try to submit. */}
-                <button
-                  type="button"
-                  className="inline-flex items-center gap-2 bg-stone-900 text-stone-50 px-6 py-4 rounded-md text-base font-medium hover:bg-stone-800 transition-colors"
-                >
-                  Send Quote Request
-                  <span aria-hidden>→</span>
-                </button>
-                <p className="text-xs text-stone-500 pt-2">
-                  We respond within 24 hours. Your info stays private — no
-                  spam, no sharing.
-                </p>
-              </form>
+              <QuoteForm />
             </div>
           </div>
         </div>
